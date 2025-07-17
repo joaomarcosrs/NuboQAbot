@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "nuboqabot"
+version = "0.1.0"
+description = "Telegram bot based on RAG (Retrieval-Augmented Generation) that allows users to send PDF files and ask questions about the content of these documents."
+authors = ["João Marcos Silva <joaomarcosrs40@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-telegram-bot = "^22.2"
+pdfminer-six = "^20250506"
+sentence-transformers = "^5.0.0"
+faiss-cpu = "^1.11.0.post1"
+langchain = "^0.3.26"
+python-decouple = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
