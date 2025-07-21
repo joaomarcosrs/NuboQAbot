@@ -19,7 +19,7 @@ async def quit(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     await update.message.reply_text("You've exited the current context. Upload a new PDF to get started.")
 
-async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def help(update: Update):
     await update.message.reply_text(
         'Available commands:\n'\
         '/start - Starts the bot\n'\
