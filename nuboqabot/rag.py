@@ -1,4 +1,4 @@
-from llm import call_llm
+from .llm import call_llm
 
 
 def retrieve_and_answer(query: str, index, chunks, embedder_model) -> str:

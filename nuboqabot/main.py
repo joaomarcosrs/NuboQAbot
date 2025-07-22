@@ -4,8 +4,8 @@ import requests
 from decouple import config
 from telegram.ext import ApplicationBuilder
 from telegram.ext import MessageHandler, filters, CommandHandler
-from bot import start, quit, help, handle_pdf, handle_question
-from llm import MODEL
+from .bot import start, quit, help, handle_pdf, handle_question
+from .llm import MODEL
 
 
 TOKEN = config('TELEGRAM_TOKEN', cast=str)

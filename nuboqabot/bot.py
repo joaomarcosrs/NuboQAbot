@@ -1,9 +1,9 @@
 import os
 from telegram import Update
 from telegram.ext import ContextTypes
-from loader import extract_text_from_pdf
-from embedder import embed_text, create_or_update_index, model
-from rag import retrieve_and_answer
+from .loader import extract_text_from_pdf
+from .embedder import embed_text, create_or_update_index, model
+from .rag import retrieve_and_answer
 
 
 PDF_FOLDER = 'pdfs'
@@ -35,7 +35,8 @@ async def handle_pdf(update: Update, context: ContextTypes.DEFAULT_TYPE):
     file_path = os.path.join(PDF_FOLDER, f'{file.file_unique_id}.pdf')
     
     await file.download_to_drive(
-        custom_path=file_path
+        custom_path=file_path,
+        read_timeout=1200
     )
 
     text = extract_text_from_pdf(
