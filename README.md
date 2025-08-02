@@ -10,3 +10,39 @@ The bot processes the PDF, extracts the text, generates semantic embeddings, and
 - Local processing using pdfminer, Sentence Transformers, FAISS, and Ollama (e.g., Mistral model).
 
 The goal is to enable intelligent, privacy-friendly document Q&A directly from your Telegram chat, without relying on external AI services.
+
+## Prerequisites
+- [Poetry](https://python-poetry.org/docs/#installation)
+- [Docker](https://docs.docker.com/get-docker/)
+
+## How to use
+
+1. Clone the repository:
+
+```bash
+git clone <REPOSITORY_URL>
+cd NuboQAbot
+```
+
+2. Create a `.env` file in the project root with the following content (example):
+
+```env
+TELEGRAM_TOKEN=your_telegram_token
+OLLAMA_SERVER=http://localhost:11434
+MODEL=mistral
+SENTENCE_TRANSFORMER=all-MiniLM-L6-v2
+```
+
+3. Build the Docker image:
+
+```bash
+docker build -t nuboqabot .
+```
+
+4. Run the container:
+
+```bash
+docker run -d --env-file .env nuboqabot
+```
+
+The bot will be available and ready to receive PDFs and questions via Telegram.
