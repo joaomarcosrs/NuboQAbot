@@ -12,6 +12,7 @@ The bot processes the PDF, extracts the text, generates semantic embeddings, and
 The goal is to enable intelligent, privacy-friendly document Q&A directly from your Telegram chat, without relying on external AI services.
 
 ## Prerequisites
+- [Python3.12+](https://www.python.org/downloads/)
 - [Poetry](https://python-poetry.org/docs/#installation)
 - [Docker](https://docs.docker.com/get-docker/)
 
@@ -20,7 +21,7 @@ The goal is to enable intelligent, privacy-friendly document Q&A directly from y
 1. Clone the repository:
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/joaomarcosrs/NuboQAbot.git
 cd NuboQAbot
 ```
 
