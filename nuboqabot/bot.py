@@ -31,6 +31,7 @@ async def help(update: Update):
     )
 
 async def handle_pdf(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Document received! Waiting while I analyze it...")
     file = await update.message.document.get_file()
     file_path = os.path.join(PDF_FOLDER, f'{file.file_unique_id}.pdf')
     
